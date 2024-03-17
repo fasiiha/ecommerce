@@ -5,7 +5,10 @@ export default function NewProduct() {
   const [name, setName] = useState("");
   const [descript, setDescript] = useState("");
   const [price, setPrice] = useState("");
-  const createProduct = () => {};
+  const createProduct = async () => {
+    const data = { title, descript, price };
+    await axios.post("/api/products", data);
+  };
   return (
     <>
       <Layout>
